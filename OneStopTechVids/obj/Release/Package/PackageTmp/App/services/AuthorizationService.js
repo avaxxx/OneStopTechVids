@@ -24,7 +24,6 @@ var AuthorizationService = (function () {
     AuthorizationService.prototype.fillAuthData = function () {
         var self = this;
         var auth = self.localStorageService.get('authorizationData');
-        console.log(auth);
         if (auth) {
             self.authentification.isAuth = auth.isAuth;
             self.authentification.userName = auth.userName;

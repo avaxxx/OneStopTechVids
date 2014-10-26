@@ -4,6 +4,8 @@
     <title>One stop technology video training site</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/Styles.css" rel="stylesheet" />
+    <link href="Content/kendo.common.min.css" rel="stylesheet"/>
+    <link href="Content/kendo.bootstrap.min.css" rel="stylesheet"/>
     <style type="text/css">
         [ng-cloak] {
             display: none;
@@ -23,6 +25,7 @@
             <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
                     <li data-ng-hide="!authentification.isAuth"><a href="#">Welcome {{authentification.userName}}</a></li>
+                    <li data-ng-hide="!authentification.isAuth"><a href="#/kendo">Kendo</a></li>
                     <li data-ng-hide="!authentification.isAuth"><a href="" ng-click="logout()">Logout</a></li>
                     <li data-ng-hide="authentification.isAuth"> <a href="#/login">Login</a></li>
                     <li data-ng-hide="authentification.isAuth"> <a href="#/signup">Sign Up</a></li>

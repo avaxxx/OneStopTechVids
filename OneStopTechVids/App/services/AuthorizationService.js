@@ -1,4 +1,4 @@
-﻿///<reference path='../../Scripts/typings/angularLocalStorage/angularLocalStorage.d.ts' />
+///<reference path='../../Scripts/typings/angularLocalStorage/angularLocalStorage.d.ts' />
 
 var AuthorizationService = (function () {
     function AuthorizationService($http, $q, ngAuthSettings, localStorageService) {

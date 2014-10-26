@@ -1,4 +1,5 @@
 ///<reference path='../../Scripts/typings/angularLocalStorage/angularLocalStorage.d.ts' />
+///<reference path='../../Scripts/typings/underscore/underscore.d.ts' />
 
 var TechVidsCategoryCtrl = (function () {
     function TechVidsCategoryCtrl($scope, $location, techVidsDataSvc, AuthorizationService) {
@@ -12,6 +13,8 @@ var TechVidsCategoryCtrl = (function () {
         var self = this;
 
         self.dataSvc.getAllCategories().then(function (data) {
+            //var first = _.first(data);
+            //console.log(first);
             self.$scope.categories = data;
         });
 
@@ -25,7 +28,7 @@ var TechVidsCategoryCtrl = (function () {
     return TechVidsCategoryCtrl;
 })();
 
-define(['app', 'angular', 'angular-sanitize'], function (app) {
+define(['app', 'angular', 'angular-sanitize', 'underscore'], function (app) {
     TechVidsCategoryCtrl.$inject = ['$scope', '$location', 'TechVidsDataSvc', 'AuthorizationService'];
 
     //angular

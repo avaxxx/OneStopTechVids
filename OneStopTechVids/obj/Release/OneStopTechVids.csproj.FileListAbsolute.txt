@@ -11,3 +11,17 @@ C:\Users\Pavol\Documents\GitHub\angularjs-with-typescript-dncmag-12\OneStopTechV
 C:\Users\Pavol\Documents\GitHub\angularjs-with-typescript-dncmag-12\OneStopTechVids\bin\System.Web.Http.WebHost.xml
 C:\Users\Pavol\Documents\GitHub\angularjs-with-typescript-dncmag-12\OneStopTechVids\obj\Release\OneStopTechVids.dll
 C:\Users\Pavol\Documents\GitHub\angularjs-with-typescript-dncmag-12\OneStopTechVids\obj\Release\OneStopTechVids.pdb
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\OneStopTechVids.dll.config
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\OneStopTechVids.dll
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\OneStopTechVids.pdb
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\Newtonsoft.Json.dll
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\System.Net.Http.Formatting.dll
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\System.Web.Http.dll
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\System.Web.Http.WebHost.dll
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\Newtonsoft.Json.xml
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\System.Net.Http.Formatting.xml
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\System.Web.Http.xml
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\bin\System.Web.Http.WebHost.xml
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\obj\Release\OneStopTechVids.csprojResolveAssemblyReference.cache
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\obj\Release\OneStopTechVids.dll
+C:\Users\Pavol\Documents\GitHub\OneStopTechVids\OneStopTechVids\obj\Release\OneStopTechVids.pdb

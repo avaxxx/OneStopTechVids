@@ -10,7 +10,12 @@ define(
     ['angular', 'angular-route', 'services/RouteResolver', 'angular-localstorage'],
     function (angular: ng.IAngularStatic) {
 
-        var app = angular.module('owleen.app', ['ngRoute', 'routeResolverServices', 'LocalStorageModule']);
+        angular.module('underscore', []).factory('_', function () {
+            var wind: any = window;
+            return wind._; // assumes underscore has already been loaded on the page
+        });
+
+        var app = angular.module('owleen.app', ['ngRoute', 'routeResolverServices', 'LocalStorageModule', 'underscore','kendo.directives']);
         app.config([
             '$routeProvider',
             'routeResolverProvider',
@@ -32,6 +37,7 @@ define(
 
                 $routeProvider
                     .when("/list", { templateUrl: "App/Templates/VideoList.html", controller: "TechVidsListCtrl" })
+                    .when("/kendo", {templateUrl: "App/Templates/Basic.html", controller: "BasicController"})
                     .when("/list/:id", { templateUrl: "App/Templates/VideoList.html", controller: "TechVidsListCtrl" })
                     //.when("/add", { templateUrl: "App/Templates/AddVideo.html", controller: "AddTechVideoCtrl" })
                     .when("/add", route.resolve('AddTechVideo', 'video/'))

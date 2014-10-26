@@ -3,7 +3,12 @@
 ///<reference path='../Scripts/typings/requirejs/require.d.ts' />
 
 define(['angular', 'angular-route', 'services/RouteResolver', 'angular-localstorage'], function (angular) {
-    var app = angular.module('owleen.app', ['ngRoute', 'routeResolverServices', 'LocalStorageModule']);
+    angular.module('underscore', []).factory('_', function () {
+        var wind = window;
+        return wind._;
+    });
+
+    var app = angular.module('owleen.app', ['ngRoute', 'routeResolverServices', 'LocalStorageModule', 'underscore', 'kendo.directives']);
     app.config([
         '$routeProvider',
         'routeResolverProvider',
@@ -15,7 +20,7 @@ define(['angular', 'angular-route', 'services/RouteResolver', 'angular-localstor
         function ($routeProvider, routeResolverProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $httpProvider, localSorageServiceProvider) {
             var route = routeResolverProvider.route;
 
-            $routeProvider.when("/list", { templateUrl: "App/Templates/VideoList.html", controller: "TechVidsListCtrl" }).when("/list/:id", { templateUrl: "App/Templates/VideoList.html", controller: "TechVidsListCtrl" }).when("/add", route.resolve('AddTechVideo', 'video/')).when("/edit/:id", route.resolve('EditTechVideo', 'video/')).when("/login", route.resolve('Login', 'account/')).when("/signup", route.resolve('Signup', 'account/')).otherwise({ redirectTo: '/list' });
+            $routeProvider.when("/list", { templateUrl: "App/Templates/VideoList.html", controller: "TechVidsListCtrl" }).when("/kendo", { templateUrl: "App/Templates/Basic.html", controller: "BasicController" }).when("/list/:id", { templateUrl: "App/Templates/VideoList.html", controller: "TechVidsListCtrl" }).when("/add", route.resolve('AddTechVideo', 'video/')).when("/edit/:id", route.resolve('EditTechVideo', 'video/')).when("/login", route.resolve('Login', 'account/')).when("/signup", route.resolve('Signup', 'account/')).otherwise({ redirectTo: '/list' });
 
             app.register = {
                 controller: $controllerProvider.register,
@@ -40,7 +45,6 @@ define(['angular', 'angular-route', 'services/RouteResolver', 'angular-localstor
             //Client-side security. Server-side framework MUST add it's
             //own security as well since client-based security is easily hacked
             $rootScope.$on("$routeChangeStart", function (event, next, current) {
-                console.log(next);
                 if (next && next.$$route && next.$$route.originalPath != '/signup') {
                     if (!AuthorizationService.authentification.isAuth) {
                         $rootScope.$evalAsync(function () {

@@ -1,0 +1,32 @@
+﻿<h1>{{appTitle}}</h1>
+
+
+<input kendo-date-picker
+       ng-model="dateString"
+       k-options="options"
+       k-ng-model="dateObject"
+       k-change="clickFunction" />
+
+<pre>
+dateString: {{ dateString }}
+dateObject: {{ dateObject | date:"EEEE, MMMM d, yyyy" }}
+typeof dateObject: {{ getType(dateObject) }}
+dateObject instanceof Date: {{ isDate(dateObject) }}
+</pre>
+
+<select kendo-drop-down-list
+        k-data-text-field="'name'"
+        k-data-value-field="'id'"
+        k-data-source="categories"
+        style="width: 200px"></select>
+
+<select kendo-drop-down-list
+        k-options="dropDownOptions"
+        k-data-source="categories"
+        k-ng-model="dropDownValue"
+        k-change="clickFunction2"
+        style="width: 200px"></select>
+<pre>
+value: {{ dropDownValue }}
+
+</pre>

@@ -1,4 +1,5 @@
 ///<reference path='../../Scripts/typings/angularLocalStorage/angularLocalStorage.d.ts' />
+///<reference path='../../Scripts/typings/underscore/underscore.d.ts' />
 
 interface ITechVidsCategoryScope extends ng.IScope {
     categories: Array<Extensions.Category>;
@@ -15,7 +16,9 @@ class TechVidsCategoryCtrl {
         private init(): void {
             var self = this;
 
-                self.dataSvc.getAllCategories().then(function (data) {
+            self.dataSvc.getAllCategories().then(function (data) {
+                //var first = _.first(data);
+                //console.log(first);
                     self.$scope.categories = data;
                 }); 
             
@@ -35,7 +38,7 @@ class TechVidsCategoryCtrl {
             this.AuthorizationService = AuthorizationService;
             this.$location = $location;
             this.init();
-
+            
        
         }
 
@@ -47,7 +50,7 @@ class TechVidsCategoryCtrl {
     }
     
 
-    define(['app','angular', 'angular-sanitize'],
+    define(['app','angular', 'angular-sanitize', 'underscore'],
         function (app:ng.IModule) {
             TechVidsCategoryCtrl.$inject = ['$scope','$location', 'TechVidsDataSvc', 'AuthorizationService'];
             //angular
