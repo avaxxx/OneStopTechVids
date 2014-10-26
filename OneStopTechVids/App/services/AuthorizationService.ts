@@ -44,7 +44,6 @@ class AuthorizationService implements IAuthorizationService {
     fillAuthData(): void {
         var self = this;
         var auth: Extensions.Authentication = self.localStorageService.get('authorizationData');
-        console.log(auth);
         if (auth) {
 
 

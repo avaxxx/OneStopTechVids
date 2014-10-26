@@ -40,7 +40,6 @@ define(['angular', 'angular-route', 'services/RouteResolver', 'angular-localstor
             //Client-side security. Server-side framework MUST add it's
             //own security as well since client-based security is easily hacked
             $rootScope.$on("$routeChangeStart", function (event, next, current) {
-                console.log(next);
                 if (next && next.$$route && next.$$route.originalPath != '/signup') {
                     if (!AuthorizationService.authentification.isAuth) {
                         $rootScope.$evalAsync(function () {
